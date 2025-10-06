@@ -7,169 +7,82 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffb347; /* light mode background */
+            background-color: #ffb347;
             color: black;
             transition: all 0.3s ease;
         }
-
-        /* Dark mode colors */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        body.dark-mode .card {
-            background-color: #1e1e1e;
-            color: white;
-        }
-
-        body.dark-mode .navbar-custom {
-            background-color: #1e1e1e;
-        }
-
-        body.dark-mode .navbar-custom .nav-link {
-            color: white;
-        }
-
-        body.dark-mode .navbar-custom .nav-link:hover {
-            color: #ffb347;
-        }
-
-        /* Navbar customization */
+        body.dark-mode { background-color: #121212; color: white; }
+        body.dark-mode .card { background-color: #1e1e1e; color: white; }
+        body.dark-mode .navbar-custom { background-color: #1e1e1e; }
+        body.dark-mode .navbar-custom .nav-link { color: white; }
+        body.dark-mode .navbar-custom .nav-link:hover { color: #ffb347; }
         .navbar-custom {
             background-color: rgb(255, 136, 0);
             transition: background 0.3s ease;
         }
-
-        .navbar-custom .nav-link {
-            color: black;
-            font-weight: 500;
-        }
-
-        .navbar-custom .nav-link:hover {
-            color: white;
-        }
-
-        /* Section spacing */
-        section {
-            padding: 80px 20px;
-            transition: all 0.3s ease;
-        }
-
-        /* Headings in black for light mode */
-        h1, h2 {
-            color: black;
-        }
-
-        body.dark-mode h1, body.dark-mode h2 {
-            color: white;
-        }
-
-        /* Card enhancements */
+        .navbar-custom .nav-link { color: black; font-weight: 500; }
+        .navbar-custom .nav-link:hover { color: white; }
+        section { padding: 80px 20px; transition: all 0.3s ease; }
+        h1, h2 { font-weight: bold; color: black; }
+        body.dark-mode h1, body.dark-mode h2 { color: white; }
         .card {
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            background-color: #ffe0b3; /* light mode */
+            background-color: #ffe0b3;
             color: black;
             transition: all 0.3s ease;
         }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-title {
-            font-weight: bold;
-        }
-
-        .card-footer .btn {
-            width: 100%;
-        }
-
-        /* Section headings */
-        h2 {
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        /* Skills list */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
+        .card:hover { transform: translateY(-5px); }
+        .card-title { font-weight: bold; }
+        .card-footer .btn { width: 100%; }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 15px; }
         .skill-item {
-            background-color: #ffcc80; /* light mode */
+            background-color: #ffcc80;
             padding: 8px 15px;
             border-radius: 20px;
             font-weight: 500;
             color: black;
             transition: all 0.3s ease;
         }
+        body.dark-mode .skill-item { background-color: #2a2a2a; color: white; }
+        .btn-warning:hover { background-color: #ff9f00; color: white; }
 
-        body.dark-mode .skill-item {
-            background-color: #2a2a2a;
-            color: white;
+        /* LinkedIn/Resume Floating Bar */
+        .linkedin-bar {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-
-        /* Button hover */
-        .btn-warning:hover {
-            background-color: #ff9f00;
+        .linkedin-bar a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
         }
-        /* LinkedIn floating icon on left */
-.linkedin-bar {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.linkedin-bar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0077b5; /* LinkedIn blue */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 0 5px 5px 0;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.linkedin-bar a:hover {
-    background-color: #005582;
-}
-
+        .linkedin-bar a:hover { opacity: 0.85; }
+        .linkedin-bar .linkedin { background-color: #0077b5; }
+        .linkedin-bar .resume { background-color: #28a745; }
     </style>
 </head>
 <body>
-  <!-- LinkedIn + Resume Floating Bar -->
-<div class="linkedin-bar">
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/sakethram-kondapally-516121272" target="_blank">
-        LinkedIn
-    </a>
-
-    <!-- Resume -->
-    <a href="SakethRam Kondapally.pdf" target="_blank" style="background-color: #28a745;">
-        Resume
-    </a>
-</div>
-
-
+    <!-- LinkedIn + Resume Floating Bar -->
+    <div class="linkedin-bar">
+        <a href="https://www.linkedin.com/in/sakethram-kondapally-516121272" target="_blank" class="linkedin">LinkedIn</a>
+        <a href="SakethRam Kondapally.pdf" target="_blank" class="resume">Resume</a>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -207,9 +120,9 @@
             <h2>About Me</h2>
             <div class="card p-4 mb-4">
                 <p>
-                    I am a frontend developer with foundational knowledge in HTML, CSS, JavaScript, and React. 
+                    I am a frontend developer with knowledge in HTML, CSS, JavaScript, and React. 
                     Currently learning Java to become a full-stack developer. 
-                    I am passionate about building responsive and engaging web applications and continuously improving my skills.
+                    Passionate about building responsive and engaging web applications.
                 </p>
             </div>
         </div>
@@ -239,9 +152,9 @@
         <div class="container">
             <h2 class="text-center">Projects</h2>
             <div class="row g-4">
-
+                <!-- Portfolio Website -->
                 <div class="col-md-4">
-                    <div class="card h-100 p-3">
+                    <div class="card h-100 p-3 d-flex flex-column justify-content-between">
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Website</h5>
                             <p class="card-text">
@@ -251,43 +164,39 @@
                         </div>
                         <div class="card-footer bg-transparent border-0">
                             <a href="https://sakethram-8.github.io/Portifolio/" target="_blank" class="btn btn-warning btn-sm">View Project</a>
-
                         </div>
                     </div>
                 </div>
 
+                <!-- Student Management System -->
                 <div class="col-md-4">
-                    <div class="card h-100 p-3">
+                    <div class="card h-100 p-3 d-flex flex-column justify-content-between">
                         <div class="card-body">
                             <h5 class="card-title">Student Management System</h5>
                             <p class="card-text">
-                                Java console application to manage student records using OOP concepts like classes, objects, inheritance, and encapsulation.
-                                Supports Add, Update, Delete, and Search operations.
+                                Java console application managing student records using OOP concepts like classes, objects, inheritance, and encapsulation.
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                          <a href="README.md" class="btn btn-warning btn-sm">View Project</a>
+                            <a href="README.md" target="_blank" class="btn btn-warning btn-sm">View Project</a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- iOS vs Android Study -->
                 <div class="col-md-4">
-                    <div class="card h-100 p-3">
+                    <div class="card h-100 p-3 d-flex flex-column justify-content-between">
                         <div class="card-body">
                             <h5 class="card-title">iOS vs Android Study</h5>
                             <p class="card-text">
-                                Academic comparative study analyzing performance, security, and user experience differences between iOS and Android platforms.
-                                Includes data visualization and key findings.
+                                Comparative study analyzing performance, security, and user experience differences between iOS and Android.
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-0">
-                            <div class="card-footer bg-transparent border-0">
-    <a href="Ios VS Android PDF.pdf" target="_blank" class="btn btn-warning btn-sm">View Report</a>
-</div>
-
+                            <a href="Ios VS Android PDF.pdf" target="_blank" class="btn btn-warning btn-sm">View Report</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -305,14 +214,14 @@
         </div>
     </section>
 
-   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: sakethramkondapally@gmail.com</p>
-    </a>
-       <p>Mobile Number;7330771575 </p>
-
-</section>
-
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sakethramkondapally@gmail.com">sakethramkondapally@gmail.com</a></p>
+            <p>Mobile: +91 7330771575</p>
+        </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -325,6 +234,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
