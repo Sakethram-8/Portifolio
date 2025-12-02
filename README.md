@@ -9,7 +9,7 @@ Built with **HTML, CSS, JavaScript, Bootstrap**, and **React**. Responsive desig
 - **iOS vs Android Comparative Study:** Academic project analyzing performance, security, and user experience. [View Report](iOS_vs_Android_Report.pdf)  
 
 ## Skills
-HTML5, CSS3, JavaScript (ES6+), Bootstrap, React.js (Basic), Java (OOP), Responsive Design, DOM Manipulation
+HTML5, CSS3, JavaScript (ES6+), Bootstrap, React.js (Basic), Cloud Fundamentals, Responsive Design, DOM Manipulation
 
 ## Contact
 **Email:** sakethramkondapally@gmail.com  
