@@ -5,7 +5,7 @@ Built with **HTML, CSS, JavaScript, Bootstrap**, and **React**. Responsive desig
 
 ## Projects
 - **Portfolio Website:** Personal website with smooth scrolling, responsive layout, and dark mode. [View Project](https://github.com/Sakethram-8/Portifolio)  
-- **Java Student Management System:** Basic OOP project in Java demonstrating classes, inheritance, and encapsulation. [View Project](#)  
+
 - **iOS vs Android Comparative Study:** Academic project analyzing performance, security, and user experience. [View Report](iOS_vs_Android_Report.pdf)  
 
 ## Skills
